@@ -10,7 +10,7 @@ productRouter.get("/", (req,res)=>{
 
 productRouter.post("/product",(req,res)=>{
     console.log(req.body)
-    products.push({title:req.body.title})
+    products.push({title:req.body.title,price:req.body.price,description:req.body.description})
     res.redirect("/")
 })
 
