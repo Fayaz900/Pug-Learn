@@ -5,7 +5,7 @@ const shopRouter=express.Router()
 
 shopRouter.get("/",(req,res)=>{
     console.log(products)
-    res.render("shop", {prods : products})
+    res.render("shop", {prods : products, path:'/shop'})
 })
 
 

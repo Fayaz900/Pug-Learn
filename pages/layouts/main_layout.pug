@@ -3,16 +3,16 @@ head
     meta(charset='UTF-8')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     meta(http-equiv='X-UA-Compatible' content='ie=edge')
-    title Page Not Found
+    title Shop
     block styles
     body
             header.main-header
                 nav.main-header__nav
                     ul.main-header__item-list
                         li.main-header__item 
-                            a(href='/') Home 
+                            a(href='/',class=(path==='/' && 'active')) Home 
                         li.main-header__item
-                            a.active(href='/shop') Shop
+                            a(href='/shop',class=(path==='/shop' && 'active')) Shop
                         li.main-header__item
-                            a(href='/addProduct') Add Product
+                            a(href='/addProduct',class=(path==='/addProduct' && 'active')) Add Product
             block content

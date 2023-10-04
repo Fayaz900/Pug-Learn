@@ -5,7 +5,7 @@ const productRouter=express.Router()
 const products=[]
 
 productRouter.get("/", (req,res)=>{
-    res.render('addProduct')
+    res.render('addProduct', {path:'/addProduct'})
 })
 
 productRouter.post("/product",(req,res)=>{
