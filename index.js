@@ -16,17 +16,17 @@ app.use(express.static(path.join(__dirname,"public")))
  app.use("/addProduct", productRouter)
  app.use("/shop", shopRouter )
 
+
 //response for home route
- app.use("/",(req,res)=>{
+ app.get("/",(req,res)=>{
     res.render('home')
 })
 
-app.use((req,res)=>{
-    res.sendFile(path.join(__dirname,"pages/404.html"))
+app.use((req,res,next)=>{
+    res.render('404')
 })
 
 
-
 app.listen(8055,()=>{
-    console.log("server running...");
+    console.log("server is running on port 8055...");
 })
